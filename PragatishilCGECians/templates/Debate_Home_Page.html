@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Debate_Club</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=0">
+     <meta name="HandheldFriendly" content="true">
+     <link rel = "icon" type = "image/png" href = "https://drive.google.com/uc?export=download&id=15tkvDLYi0Zh6z-pfWybmxpU6XB0pu0Zo" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+     <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+     <script src="http://www.slidesjs.com/examples/basic-fade/js/jquery.slides.min.js"></script>
+
+
+    <style>
+
+
+img
+{
+  position: relative;
+  width:100%;
+}
+
+body {
+  width:100%;
+  font-family: 'segoe ui';
+  position: absolute;
+}
+
+.-fx-image-gal {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 960px;
+	justify-content: center;
+}
+
+
+.-fx-gal-item a {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 120px;
+	background-color: white;
+}
+
+.-fx-gal-image-thumb img {
+    width: 100%;
+    cursor: pointer;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    height: 150px;
+
+}
+
+.-fx-gal-image-thumb:hover img {
+	cursor: pointer;
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	filter: grayscale(0%);
+	transform: scale(1.5);
+	transition: all 0.5s ease;
+}
+@media (min-width: 420px) {
+	.-fx-image-gal {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.-fx-gal-item {
+		width: 50%;
+	}
+}
+@media (min-width: 768px) {
+	.-fx-gal-item {
+		width: 33.33%;
+	}
+}
+.message-board{
+  margin: 0 0 0 25%
+}
+.profile{
+  background-image: center;
+  background-position: relative;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin: 2% 2% 3% 2%;
+  z-index:2;
+  position: relative;
+}
+
+.indicator{
+  display:inline-block;
+  margin: 0 0 0 50px;
+  font-family:helvetica;
+  font-size: 14px;
+  width:100px;
+}
+.line{
+  border-left: 1px solid grey;
+  z-index:1;
+  height: 650px;
+  margin-top: 3.2%;
+  margin-left: 4.5%;
+  position: fixed;
+}
+.comment-box{
+  height: 150px;
+  width: 50%;
+  background: white;
+  margin: 3% 0 0 0;
+  display: inline-block;
+  border-radius: 2%;
+  box-shadow: 2px 2px 20px #e3e3e3;
+  position: relative;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.site-footer {
+  margin-top: 15px;
+	position: relative;
+	background-color:#1A1F24;
+	width: 100%;	
+	bottom: 0; 
+}
+
+.site-footer .container {
+	max-width: 85%;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.site-footer .container h1 {
+	font-size: 40px;
+}
+
+.site-footer .container h2 {
+	font-size: 40px;
+	float: right;
+}
+
+.site-footer .grid-container a {
+	color: #A2845C;
+	text-decoration: none;
+	font-size: 15px;
+	line-height: 16.25px;
+}
+
+.site-footer .grid-item {
+	padding: 10px;
+	color: #A2845C;
+}
+
+
+.site-footer .grid-container .inner-grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	text-align: left;
+}
+
+.site-footer .container hr { 
+	display: block; 
+	height: 1px;
+	border: 0; border-top: 1px solid #A2845C;
+	margin: 1px; 
+	padding: 0; 
+}
+
+.site-footer .container p {
+	font-size: 14px;
+	text-align: right;
+	color: #A2845C;
+	font-weight: 500;
+}
+
+.site-footer .container .logo-img {
+	width: 180px;
+	height: 140px;
+	cursor: pointer;
+}
+
+.site-footer .grid-container .grid-item .social-buttons {
+}
+
+.site-footer .grid-container .grid-item .social-buttons a {
+	display: inline-flex;
+	text-decoration: none;
+	font-size: 30px;
+	width: 60px;
+	height: 60px;
+	color: #1A1F24;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 0 8px;
+}
+
+
+.site-footer .grid-container .grid-item .social-buttons a i{
+	transition: 0.3s ease-in;
+}
+
+.site-footer .grid-container .grid-item .social-buttons a:hover i {
+	background: linear-gradient(45deg,#A2845C,#A2845C);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transform: scale(1.5);
+}
+
+.circle-icon {
+    background: #A2845C;
+    padding:12px;
+    border-radius: 50%;
+}
+
+
+	.site-footer {
+		height: 620px;
+		bottom: 0; 
+	}
+
+	.site-footer .grid-container {
+		display: grid;
+		grid-template-columns: 400px;
+	}
+
+	.site-footer .grid-container .inner-grid-container {
+		display: grid;
+		grid-template-columns: auto auto ;
+		text-align: left;
+	}
+
+
+}
+
+
+@media only screen and (min-width: 992px) {
+
+	.site-footer {
+		height: 260px;
+		bottom: 0;
+	}
+
+	.site-footer .grid-container {
+		display: grid;
+		grid-template-columns: 350px auto 350px;
+	}
+
+	.site-footer .grid-container .inner-grid-container{
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		text-align: left;
+	}
+
+}
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    margin-right: 5 px;
+    font-size: 1.02rem;
+    line-height: 1.4;
+  }
+
+
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+
+
+  }
+}
+                .img-list {
+          margin:0 auto;
+        }
+
+        .img-list ol,
+        .img-list ul {
+          list-style:none;
+        }
+
+        .img-list-gutter {
+          padding:0;
+        }
+
+        .img-list-item {
+          border-bottom:1px solid #c2c2c2;
+          padding-bottom:0.9em;
+          margin-bottom:0.9em;
+        }
+
+        .img-list-text {
+          padding: 1em 1em;
+        }
+
+        @media (min-width:600px) {
+
+          .image-list-gutter {
+            display:table;
+          }
+
+          .img-list-image,
+          .img-list-text {
+            display:table-cell;
+            vertical-align:top;
+            position: reltive;
+            margin-right: 10px;
+          }
+
+          .img-list-text {
+            padding: 20 10 10 38px;
+            position: relative;
+          }
+
+          .img-list-image {
+            min-width:280px;
+            margin-right: 10px;
+            position:relative;
+          }
+
+          .img-list-src {
+            width:100%;
+            max-width:356px;
+            margin-right: 10px;
+            position:relative;
+          }
+
+        }
+
+        @media (min-width:764px) {
+
+          .img-list-text {
+            padding: 30 10 10 48px;
+            postion: relative;
+            margin-right: 20px;
+          }
+
+          .img-list-image {
+            min-width:356px;
+            max-width:356px;
+            margin-right: 10px;
+            position:relative;
+          }
+
+        }
+body {
+  color: #212121;
+}
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+  
+    </style>
+</head>
+<body>
+<div class="header">
+  <a href="#default" class="logo">Debate Club</a>
+  <div class="header-right">
+    <a href="/Debate_Register">Register</a>
+    <a href="/main_page">PragatishilCGECians</a>
+  </div>
+</div>
+<img src="https://drive.google.com/uc?export=download&id=1xgL1gRbgHZhfU4IR1GJX225hKoM6kAp1" style="width:100%; height: 700px; position: relative;">
+<hr class="featurette-divider">
+<section class="img-list">
+  <ol class='img-list-parent'>
+    <li class='img-list-item'>
+      <div class='img-list-gutter'>
+        <div class='img-list-image'>
+          <img class="img-list-src" src="https://drive.google.com/uc?id=1Nxkm9eVUWObTi5S9sJWI3P13KgD9ReB1">
+        </div>
+        <div class='img-list-text'>
+          <h3>Sahasrak Bhattecharya ESE, Batch 2022</h3>
+          <p>As Lord Byron said " I deny nothing but I doubt everything" ...so do we ...we doubt then we think and analyze the things happening around us ...this debate club is a open platform of discussing our doubts and definitely the facts ....it's the place where we think rationally and argue . Debating enhances the habit of rational thinking and changes views ...so we Pragatisheel Cgecians are bringing the opportunity for everyone to cherish the habit of debating ...do join and come up with your debating ability"</p>
+        </div>
+      </div>
+    </li>
+  </ol>
+
+</section>
+
+<hr class="featurette-divider">
+
+<hr class="featurette-divider">
+<span><b><h1 style="text-align: center;"> Notice </h1></b></span><br><br>
+<div class="message-board">
+<div class="line"></div>
+<div>
+<img class="profile" src="https://drive.google.com/uc?export=download&id=1xgL1gRbgHZhfU4IR1GJX225hKoM6kAp1" width="50"/>
+<div class="comment-box"> <h3 style="text-align: center; margin-top: 5px;">Check out our latest video.</h3>
+</div>
+</div>
+<div>
+<img class="profile" src="https://drive.google.com/uc?export=download&id=1xgL1gRbgHZhfU4IR1GJX225hKoM6kAp1" width="50"/>
+    <div class="comment-box"> <h3 style="text-align: center; margin-top: 5px;">Our Vision.</h3></div>
+</div>
+
+<img class="profile" src="https://drive.google.com/uc?export=download&id=1xgL1gRbgHZhfU4IR1GJX225hKoM6kAp1" width="50"/>
+    <div class="comment-box"> <h3 style="text-align: center; margin-top: 5px;">Welcome Vide for Freshers.</h3></div>
+</div>
+
+<div>
+</div>
+</div>
+<br>
+</div>
+<!-- Site footer -->
+	<footer class="site-footer">
+		<div class = "container">
+
+			<div class="grid-container">
+				<div class="grid-item">
+					
+					<img src = " https://drive.google.com/uc?export=download&id=1xgL1gRbgHZhfU4IR1GJX225hKoM6kAp1" class = "logo-img">
+
+				</div>
+
+				<div class="grid-item inner-grid-container">
+					
+					<div class="grid-item"><a href="/Home_Page">About Us</a></div>   
+					<div class="grid-item"><a href="http://makautexam.net/">MAKAUT</a></div>   
+					<div class="grid-item"><a href="http://cgec.org.in/">CGEC</a></div>   
+					<div class="grid-item"><a href="/Arietta_Home_Page">Arietta</a></div>   
+					<div class="grid-item"><a href="/peptalks">Pep Talks</a></div>   
+					<div class="grid-item"><a href="/Pratibimba_Home_Page">Pratibimba</a></div>
+					<div class="grid-item"><a href="/Literarry_Home_Page">Creative Pens</a></div>   
+					<div class="grid-item"><a href="/Debate_Home_Page">Debate Club</a></div>
+          <div class="grid-item"><a href="/Techonics_Home_Page">Techonics</a></div>
+          <div class="grid-item"><a href="/Rongmilanti_Home_Page">Rongmilanti</a></div>  
+
+
+				</div>
+
+				<div class="grid-item">
+					<div class = "social-buttons">
+						<a href= ""><i class="fab fa-instagram circle-icon"></i></a>
+						<a href= "https://www.facebook.com/search/top?q=%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%97%E0%A6%A4%E0%A6%BF%E0%A6%B6%E0%A7%80%E0%A6%B2%20Cgecian"><i class="fab fa-facebook circle-icon"></i></a>
+						<a href= ""><i class="fab fa-linkedin-in circle-icon"></i></a>
+						<a href= ""><i class="fab fa-twitter circle-icon"></i></a>
+					</div>
+				</div>   
+			</div>
+			<hr>
+
+			<p>Copyright © 2021 | PragatishilCGECians | CGEC | PragatishilCGECians All rights reserved</p>
+
+		</div>
+	</footer>
+</body>
+
+</html>

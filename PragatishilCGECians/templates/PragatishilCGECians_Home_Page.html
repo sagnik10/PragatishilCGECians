@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home_Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=0">
+    <meta name="HandheldFriendly" content="true">
+    <link rel = "icon" type = "image/png" href = "https://drive.google.com/uc?export=download&id=1QEriajNDEIfb6Ml9OhCb_adx7God2uNz" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <!-- SlidesJS Required: Link to jQuery -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <!-- End SlidesJS Required -->
+
+  <!-- SlidesJS Required: Link to jquery.slides.js -->
+    <script src="http://www.slidesjs.com/examples/basic-fade/js/jquery.slides.min.js"></script>
+  <!-- End SlidesJS Required -->
+
+    <style>
+
+
+img
+{
+  position: relative;
+  width:100%;
+}
+
+
+
+body {
+  width:100%;
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+@media screen and (min-width: 1068px) {
+  body {
+    width:100%;
+  }
+}
+@media screen and (min-width: 950px) {
+  body {
+    width:100%;
+  }
+}
+@media screen and (min-width: 760px) {
+  body {
+    width:100%;
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    width:100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+    width:100%;
+  }
+}
+.-fx-image-gal {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 960px;
+	justify-content: center;
+}
+.-fx-gal-item {
+	width: 100%;
+	margin: 10px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.-fx-gal-item a {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 120px;
+	background-color: white;
+}
+
+.-fx-gal-image-thumb img {
+    width: 100%;
+    cursor: pointer;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    height: 150px;
+
+}
+
+.-fx-gal-image-thumb:hover img {
+	cursor: pointer;
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	filter: grayscale(0%);
+	transform: scale(1.5);
+	transition: all 0.5s ease;
+}
+@media (min-width: 420px) {
+	.-fx-image-gal {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.-fx-gal-item {
+		width: 50%;
+	}
+}
+@media (min-width: 768px) {
+	.-fx-gal-item {
+		width: 33.33%;
+	}
+}
+.message-board{
+  margin: 0 0 0 25%
+}
+.profile{
+  background-image: center;
+  background-position: relative;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin: 2% 2% 3% 2%;
+  z-index:2;
+  position: relative;
+}
+
+
+.line{
+  border-left: 1px solid grey;
+  z-index:1;
+  height: 650px;
+  margin-top: 3.2%;
+  margin-left: 4.5%;
+  position: fixed;
+}
+.comment-box{
+  height: 110px;
+  width: 50%;
+  background: white;
+  margin: 3% 0 0 0;
+  display: inline-block;
+  border-radius: 2%;
+  box-shadow: 2px 2px 20px #e3e3e3;
+  position: relative;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.site-footer {
+  margin-top: 15px;
+	position: relative;
+	background-color:#1A1F24;
+	width: 100%;	
+	bottom: 0; 
+}
+
+.site-footer .container {
+	max-width: 85%;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.site-footer .container h1 {
+	font-size: 40px;
+}
+
+.site-footer .container h2 {
+	font-size: 40px;
+	float: right;
+}
+
+.site-footer .grid-container a {
+	color: #A2845C;
+	text-decoration: none;
+	font-size: 15px;
+	line-height: 16.25px;
+}
+
+.site-footer .grid-item {
+	padding: 10px;
+	color: #A2845C;
+}
+
+
+.site-footer .grid-container .inner-grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	text-align: left;
+}
+
+.site-footer .container hr { 
+	display: block; 
+	height: 1px;
+	border: 0; border-top: 1px solid #A2845C;
+	margin: 1px; 
+	padding: 0; 
+}
+
+.site-footer .container p {
+	font-size: 14px;
+	text-align: right;
+	color: #A2845C;
+	font-weight: 500;
+}
+
+.site-footer .container .logo-img {
+	width: 180px;
+	height: 140px;
+	cursor: pointer;
+}
+
+.site-footer .grid-container .grid-item .social-buttons {
+}
+
+.site-footer .grid-container .grid-item .social-buttons a {
+	display: inline-flex;
+	text-decoration: none;
+	font-size: 30px;
+	width: 60px;
+	height: 60px;
+	color: #1A1F24;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 0 8px;
+}
+
+
+.site-footer .grid-container .grid-item .social-buttons a i{
+	transition: 0.3s ease-in;
+}
+
+.site-footer .grid-container .grid-item .social-buttons a:hover i {
+	background: linear-gradient(45deg,#A2845C,#A2845C);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transform: scale(1.5);
+}
+
+.circle-icon {
+    background: #A2845C;
+    padding:12px;
+    border-radius: 50%;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+	.site-footer {
+		height: 620px;
+		bottom: 0; 
+	}
+
+	.site-footer .grid-container {
+		display: grid;
+		grid-template-columns: 400px;
+	}
+
+	.site-footer .grid-container .inner-grid-container {
+		display: grid;
+		grid-template-columns: auto auto ;
+		text-align: left;
+	}
+
+
+}
+
+@media only screen and (min-width: 992px) {
+
+	.site-footer {
+		height: 260px;
+		bottom: 0;
+	}
+
+	.site-footer .grid-container {
+		display: grid;
+		grid-template-columns: 350px auto 350px;
+	}
+
+	.site-footer .grid-container .inner-grid-container{
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		text-align: left;
+	}
+
+}
+
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+
+@media (min-width: 40em) {
+
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+}
+
+@media (min-width: 62em) {
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+  .img-list {
+          margin:0 auto;
+        }
+
+        .img-list ol,
+        .img-list ul {
+          list-style:none;
+        }
+
+        .img-list-gutter {
+          padding:0;
+        }
+
+        .img-list-item {
+          border-bottom:1px solid #c2c2c2;
+          padding-bottom:2em;
+          margin-bottom:2em;
+        }
+
+        .img-list-text {
+          padding: 1em 0;
+        }
+
+        @media (min-width:600px) {
+
+
+
+          .img-list-image,
+          .img-list-text {
+            display:table-cell;
+            vertical-align:top;
+          }
+
+          .img-list-text {
+            padding: 0 0 0 38px;
+          }
+
+          .img-list-image {
+            min-width:280px;
+          }
+
+          .img-list-src {
+            width:100%;
+            max-width:356px;
+          }
+
+        }
+
+        @media (min-width:764px) {
+
+          .img-list-text {
+            padding: 0 0 0 48px;
+          }
+
+          .img-list-image {
+            min-width:356px;
+            max-width:356px;
+          }
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+  <a href="#default" class="logo">PragatishilCGECians</a>
+  <div class="header-right">
+    <a href="/register">Register</a>
+  </div>
+</div>
+
+<img src="https://drive.google.com/uc?export=download&id=14q6aQNKwqqBiQdavOlasY3gczm40y_R_" style="width:100%; height: 700px; position: relative;">
+<hr class="featurette-divider">
+<section class="img-list">
+  <ol class='img-list-parent'>
+    <li class='img-list-item'>
+      <div class='img-list-gutter'>
+        <div class='img-list-image'>
+          <img class="img-list-src" src="https://drive.google.com/uc?export=download&id=1GtwcBwFKPlv-5loZv11u6QX1JJdJtNsO">
+        </div>
+        <div class='img-list-text'>
+          <h3>Gopal Ghosh CE(Batch 2020)</h3>
+          <p>জ্ঞানশক্তি ও তারুণ্য এই দুই শক্তির সমন্বয়ে ছাত্র সমাজ দেশ ও জাতি গঠনে গুরুত্বপূর্ণ অবদান রাখতে পারে। আজকের ছাত্ররাই জাতির সম্ভাবনাময় প্রজন্ম। জাতির স্বপ্নময় ভবিষ্যতের কান্ডারী। এমনি সব ছাত্র-ছাত্রীর সমন্বয় আমাদের "প্রগতিশীল CGECIAN"। ছাত্রসমাজ মানেই সংঘবদ্ধ একটা শক্তি; "প্রগতিশীল CGECIAN" ও সকল ছাত্র-ছাত্রীর সংঘবদ্ধ হওয়ার একটা মঞ্চ। এই মঞ্চ সংস্কৃতি বিষয়ক বিভিন্ন শিল্পকলার শাখা সংগঠনে বিন্যস্ত হয়ে সকল ছাত্রছাত্রীকে একত্রিত করছে। সেই একত্রিত মঞ্চ সমাজের সকল অনৈতিক, ন্যায়বিরুদ্ধ ও স্বৈরাচারের বিরুদ্ধে আওয়াজ হয়ে উঠবে এবং নিজস্ব ক্যাম্পাসে কোনরকম দুর্নীতি ও আদর্শহীনতার প্রতিবাদী মুখ হয়ে উঠবে। ছাত্র-ছাত্রীদের সকল দাবী, পড়াশোনার মান থেকে ক্যাম্পাসিং পর্যন্ত সকল লড়াইয়ে সহযোদ্ধা হয়ে কাঁধে কাঁধ মিলিয়ে লড়বে "প্রগতিশীল CGECIAN"। পুঁথিগত বিদ্যার বাইরেও সাংস্কৃতিক শিল্পকলায় কলেজের মান বাড়িয়ে তোলা এবং জাতি-ধর্ম-বর্ণ নির্বিশেষে আমাদের কোচবিহার গভর্নমেন্ট ইঞ্জিনিয়ারিং কলেজে দুর্নীতিমুক্ত রেখে একটি আদর্শ ক্যাম্পাস প্রতিস্থাপন করাই "প্রগতিশীল CGECIAN" এর মূল লক্ষ্য।</p>
+        </div>
+      </div>
+    </li>
+  </ol>
+ 
+</section>
+<section class="img-list">
+  <ol class='img-list-parent'>
+    <li class='img-list-item'>
+      <div class='img-list-gutter'>
+        <div class='img-list-image'>
+          <img class="img-list-src" src="https://drive.google.com/uc?export=download&id=1ua9VqEmnbjRzJd8h8oCINBW0yjWEDvHt">
+        </div>
+        <div class='img-list-text'>
+          <h3>Anish Ali Sha CE(Batch 2021)</h3>
+          <p>আজকে যে যুব , কালকে সে দেশের ভবিষ্যৎ । ধীরে ধীরে আমারা যেভাবে আধুনিকতার প্রলোভনে জড়িয়ে যাচ্ছি , ঠিক সেভাবেই আমরা আমাদের সমাজ-সংস্কৃতি-ভাষার মর্যাদা করতে ভুলে যাচ্ছি । এই প্রগতিশীল CGECian সেইসব কিছু ছাত্রছাত্রীদের সমষ্টি তারা এসব সমস্যা নিয়ে চিন্তিত । আমাদের একটাই লক্ষ্য , জাতি-ধর্ম-বর্ন-বর্গ নির্বিশেষে কোচবিহার গভর্নমেন্ট ইঞ্জিনিয়ারিং কলেজের ছাত্র সমাজকে বাঙালি সমাজ , বাঙালি সংস্কৃতি এবং বাংলা ভাষা চর্চার মাধ্যমে আরো উন্নত জায়গায় নিয়ে যাওয়া । তার সাথে সাথে ছাত্র সমাজের আন্দোলনকে আরও এক স্তর উঁচুতে নিয়ে যাওয়া । Make Bengal Great Again !</p>
+        </div>
+      </div>
+    </li>
+  </ol>
+ 
+</section>
+<section class="img-list">
+  <ol class='img-list-parent'>
+    <li class='img-list-item'>
+      <div class='img-list-gutter'>
+        <div class='img-list-image'>
+          <img class="img-list-src" src="https://drive.google.com/uc?export=download&id=11rFcD2e0ETBdAShtXCcmxqaAf09fj6Oe">
+        </div>
+        <div class='img-list-text'>
+          <h3>Partha Datta CE(Batch 2021)</h3>
+          <p>Education, determination, social duty is one of the principles of every student, we know that the student society is the main backbone of the progress of civilization, and the "Pragatishil CGECIAN"is a significant part of that student society. The contribution of every student in the emergence of this student body, which was gradually formed in Coochbehar Government Engineering College is undeniable. From the first year to the fourth year,for every student "Pragatishil CGECIAN" has gained an important place to direct various initiatives and also to express everybody's cultural enthusiasm on behalf of our 2nd home Cgec which is eager to fulfill the knowledge in every aspect of our college education as well as cultural, social from the beginning. Moreover "PragatishilCGECians" is constantly trying to work as every student's mouthpiece and also to uphold our college with more prominant technique.</p>
+        </div>
+      </div>
+    </li>
+  </ol>
+
+</section>
+    <span><b><h1 style="text-align: center;"> Our CLubs </h1></b></span><br>
+<div class="-fx-image-gal">
+	<div class="-fx-gal-item">
+		<div class="-fx-gal-image-thumb" tabindex="1">
+			<a href="/Arietta_Home_Page" target="_blank">
+				<img src="https://drive.google.com/uc?export=download&id=1PdSkLFT_ZoJikrCt8UY3FwKiZi9F16mX" />
+			</a>
+		</div>
+	</div><br>
+
+	<div class="-fx-gal-item">
+		<div class="-fx-gal-image-thumb" tabindex="1">
+			<a href="/peptalks" target="_blank">
+				<img src="https://drive.google.com/uc?export=download&id=11904Fd0yPslLr-m0b910A7IEj2T8jAuT" />
+			</a>
+		</div>
+	</div><br>
+
+	<div class="-fx-gal-item">
+		<div class="-fx-gal-image-thumb" tabindex="1">
+			<a href="/Debate_Home_Page" target="_blank">
+				<img src="https://drive.google.com/uc?export=download&id=15tkvDLYi0Zh6z-pfWybmxpU6XB0pu0Zo" />
+			</a>
+		</div>
+	</div><br>
+
+	<div class="-fx-gal-item">
+		<div class="-fx-gal-image-thumb" tabindex="1">
+			<a href="/Literarry_Home_Page" target="_blank">
+				<img src="https://drive.google.com/uc?export=download&id=1-3xNdQV0tGBdb5l4iERE5EfnE3rmlFRq" />
+			</a>
+		</div>
+	</div><br>
+    	<div class="-fx-gal-item">
+		<div class="-fx-gal-image-thumb" tabindex="1">
+			<a href="/Rongmilanti_Home_Page" target="_blank">
+				<img src="https://drive.google.com/uc?export=download&id=1-aAsW0RqfYv1sDzpUb2uM_Z5yB_Ogxun" />
+			</a>
+		</div>
+	</div><br>
+        	<div class="-fx-gal-item">
+		<div class="-fx-gal-image-thumb" tabindex="1">
+			<a href="/Techonics_Home_Page" target="_blank">
+				<img src="https://drive.google.com/uc?export=download&id=1j9OHexgWOxwebG8nhVNdKk1NHJsUqiyl" />
+			</a>
+		</div>
+	</div><br>
+
+	<div class="-fx-gal-item">
+		<div class="-fx-gal-image-thumb" tabindex="1">
+			<a href="/Pratibimba_Home_Page" target="_blank">
+				<img src="https://drive.google.com/uc?export=download&id=1jOPUT_1tSHjtbKsIWLtN6HetRTpC-FRW" />
+			</a>
+		</div>
+	</div><br><br><br><br>
+
+</div>
+
+<span><b><h1 style="text-align: center;"> Notice </h1></b></span><br><br>
+<div class="message-board">
+<div class="line"></div>
+<div>
+<img class="profile" src="https://drive.google.com/uc?export=download&id=14q6aQNKwqqBiQdavOlasY3gczm40y_R_" width="50"/>
+    <div class="comment-box"><a href="https://www.facebook.com/pragatishilcgecians2019" style="text-decoration: none; color: black;"><h3 style="text-align: center; margin-top: 5px;">our latest activity on facebook.</h3></a>
+</div>
+</div>
+<div>
+<img class="profile" src="https://drive.google.com/uc?export=download&id=14q6aQNKwqqBiQdavOlasY3gczm40y_R_" width="50"/>
+    <div class="comment-box"><h3 style="text-align: center; margin-top: 5px;">womens day celebration</h3></div>
+</div>
+<div>
+<img class="profile" src="https://drive.google.com/uc?export=download&id=14q6aQNKwqqBiQdavOlasY3gczm40y_R_" width="50"/>
+    <div class="comment-box"><a href="https://fb.watch/5sEoUpuzwj/" style="text-decoration: none; color: black;"><h3 style="text-align: center; margin-top: 5px;">Online Cultural Expedition</h3></a></div>
+</div>
+<div>
+<img class="profile" src="https://drive.google.com/uc?export=download&id=14q6aQNKwqqBiQdavOlasY3gczm40y_R_" width="50"/>
+    <div class="comment-box"><a href="https://fb.watch/5sERNgxsS6/" style="text-decoration: none; color: black;"><h3 style="text-align: center; margin-top: 5px;">Gloabal CLimate Strike</h3></a></div>
+</div>
+<div>
+</div>
+</div>
+<br><br><br><br>
+<span><b><h1 style="text-align: center;"> Gallery </h1></b></span><br><br>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+
+    <div class="carousel-item image1 active">
+    </div>
+    <div class="carousel-item image2">
+    </div>
+    <div class="carousel-item image3">
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </a>
+</div>
+  <style>
+.carousel-item{
+  height: 16rem;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.image1{
+  background-image: url('https://drive.google.com/uc?export=download&id=14q6aQNKwqqBiQdavOlasY3gczm40y_R_');
+}
+.image2{
+  background-image: url('https://drive.google.com/uc?export=download&id=15bwGIKTzElpYKoyxwsSwSbKz6Admxgpk')
+}
+.image3{
+  background-image: url('https://drive.google.com/uc?export=download&id=16jQ2qMppwLDlQylRbqEBGGfRUtfV9S4_');
+}
+
+@media only screen and (min-width:792px){
+  .carousel-item{
+    height: 35rem;
+  }
+}
+  </style>
+ 
+
+	<footer class="site-footer">
+		<div class = "container">
+
+			<div class="grid-container">
+				<div class="grid-item">
+					
+					<img src = " https://drive.google.com/uc?export=download&id=14q6aQNKwqqBiQdavOlasY3gczm40y_R_" class = "logo-img">
+
+				</div>
+
+				<div class="grid-item inner-grid-container">
+					
+					<div class="grid-item"><a href="/main_page">About Us</a></div>
+					<div class="grid-item"><a href="http://makautexam.net/">MAKAUT</a></div>   
+					<div class="grid-item"><a href="http://cgec.org.in/">CGEC</a></div>   
+					<div class="grid-item"><a href="/Arietta_Home_Page">Arietta</a></div>   
+					<div class="grid-item"><a href="/peptalks">Pep Talks</a></div>   
+					<div class="grid-item"><a href="/Pratibimba_Home_Page">Pratibimba</a></div>
+					<div class="grid-item"><a href="/Literarry_Home_Page">Creative Pens</a></div>   
+					<div class="grid-item"><a href="/Debate_Home_Page">Debate Club</a></div>
+          <div class="grid-item"><a href="/Techonics_Home_Page">Techonics</a></div>
+          <div class="grid-item"><a href="/Rongmilanti_Home_Page">Rongmilanti</a></div>  
+
+
+				</div>
+
+				<div class="grid-item">
+					<div class = "social-buttons">
+						<a href= ""><i class="fab fa-instagram circle-icon"></i></a>
+						<a href= "https://www.facebook.com/search/top?q=%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%97%E0%A6%A4%E0%A6%BF%E0%A6%B6%E0%A7%80%E0%A6%B2%20Cgecian"><i class="fab fa-facebook circle-icon"></i></a>
+						<a href= ""><i class="fab fa-linkedin-in circle-icon"></i></a>
+						<a href= ""><i class="fab fa-twitter circle-icon"></i></a>
+					</div>
+				</div>   
+			</div>
+			<hr>
+
+			<p>Copyright © 2021 | PragatishilCGECians | CGEC | PragatishilCGECians All rights reserved</p>
+
+		</div>
+	</footer>
+</div>
+</body>
+</html>

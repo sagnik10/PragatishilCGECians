@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=0">
+  <meta name="HandheldFriendly" content="true">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+.flex{
+	background-image: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/airplane-wallpaper-2.jpg);
+    height: 530px;
+    width: 100%;
+    position: relative;
+}
+@media (max-width: 320px) {
+      .main{
+      	width: 100%;
+      }
+}
+
+.logo h2{
+	margin-top: -20px;
+	color:#00a9c6;
+	text-decoration:initial;
+}
+.logo a:hover{
+	text-decoration: initial;
+}
+
+
+.maincontent input {
+	color: #333;
+	}
+
+.logo a:hover{
+	text-decoration: initial;
+}
+.maincontent{
+	float: left;
+
+}
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tile {
+  width: 20%;
+  height: auto;
+  display: inline-block;
+  background-size: cover;
+  cursor: pointer;
+  position: relative;
+  float: left;
+  padding: 0 0 19% 0;
+  background-position: center;
+}
+
+.image-title {
+  width: 100%;
+  height: 25%;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 1rem 1rem;
+  font-size: .9em;
+  font-family:"Helvetica";
+  text-align: center;
+  line-height: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tile .image-title {
+  transition: 0.8s ease;
+}
+
+.tile:hover .image-title {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 40%;
+}
+
+@media screen and (max-width: 1280px) {
+  .image-container .tile {
+    width: 25%;
+    padding-bottom: 25%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .image-container .tile {
+    width: 33.33%;
+    padding-bottom: 33.33%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .image-container .tile {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .image-container .tile {
+    width: 50%;
+    padding-bottom: 50%;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .image-container .tile {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+}
+
+
+    </style>
+</head>
+<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">FlightBooking</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">sessions</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#">customer</a>
+
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="flex">
+<div class="container">
+                <h1> Search Flights </h1> <br>
+
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">One way</button>
+                    <button type="button" class="btn btn-default">Roundtrip</button>
+                </div>
+                <br><br>
+                <div class="maincontent">
+                    <div class="row">
+                        <div class="col-sm-6 col-xm-6 abc">
+                            <h5> Flying from </h5>
+                            <input type="text" placeholder="City or airport">
+                        </div>
+
+                        <div class="col-sm-6 col-xm-6 abc">
+                            <h5> Flying to </h5>
+                            <input type="text" placeholder="City or airport">
+                        </div>
+                    </div><br>
+
+                    <div class="row form-group">
+
+
+
+                        <div class="col-sm-4 col-xm-6">
+                            <div class="col-sm-6">
+                                <h5> Adults </h5>
+                                <input type="number" name="points"
+                                       min="0" max="100" step="10" value="1">
+                            </div>
+                            <div class="col-sm-6 abc">
+                                <h5> Children </h5>
+                                <input type="number" name="points"
+                                       min="0" max="100" step="10" value="0">
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+<br>
+
+                    <br>
+
+                    <button type="button" class="btn btn-lg btn-warning">Search </button>
+                    <br><br>
+
+
+                </div>
+            </div>
+ </div>
+
+
+</div>
+<br><br>
+<h1 style="text-align: center">our citites</h1>
+<br><br>
+<div class="image-container">
+  <div class="tile" style="background-image: url('https://drive.google.com/uc?export=download&id=1XTlyYnu86HSIrCUYjG1s_28tbLNEvGbt');">
+    <div class="image-title"><h1>Kolkata</h1>
+      Lets visit Kolkata
+    </div>
+   </div>
+
+  <div class="tile" style="background-image: url('https://drive.google.com/uc?export=download&id=1aH_RxRDRzI6c7-HEi2ERXlhcuEdrOCpg');">
+    <div class="image-title"><h1>Bihar</h1>
+      lets go to Bihar
+    </div>
+   </div>
+
+  <div class="tile" style="background-image: url('https://drive.google.com/uc?export=download&id=1T306VS1wr6tqh4f8KfZA1sQqkXkfTUZM');">
+    <div class="image-title"><h1>Manali</h1>
+  lets go to manali
+    </div>
+   </div>
+
+  <div class="tile" style="background-image: url('https://drive.google.com/uc?export=download&id=1DC-H2ArleL-w_xYWGO8LVr27rk3ianD0');">
+    <div class="image-title"><h1>Delhi</h1>
+      lets go to delhi
+    </div>
+   </div>
+
+  <div class="tile" style="background-image: url('https://drive.google.com/uc?export=download&id=1PGdjvvSChYBDIYI2NNXFVQTOov5s2fCq');">
+    <div class="image-title"><h1>Assam</h1>
+      lets go to assam
+    </div>
+   </div>
+
+  <div class="tile" style="background-image: url('https://drive.google.com/uc?export=download&id=1oVLfIdlWGJhUSBbp0JW5J_yr4tl1X0e_');">
+    <div class="image-title"><h1>Kashmir</h1>
+      lets go to kashmir
+    </div>
+   </div>
+
+  <div class="tile" style="background-image: url('https://drive.google.com/uc?export=download&id=1kxjRLJqjHcKLtw0pB-fML6c_rmULWSNu');">
+    <div class="image-title"><h1>PUnjab</h1>
+      lets go to punjab
+    </div>
+   </div>
+
+  <div class="tile" style="background-image: url('https://drive.google.com/uc?export=download&id=1KzpREqzhconjZRkSFuASjtDNeGJY9Lg9');">
+    <div class="image-title"><h1>Rajasthan</h1>
+      go to rajasthan
+    </div>
+   </div>
+
+</div>
+</body>
+</html>
